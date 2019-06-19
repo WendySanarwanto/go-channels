@@ -36,5 +36,5 @@ func checkLink(link string, c chan string) {
 	}
 
 	successMsg := link + " is up !"
-	c <- successMsg // 
+	c <- successMsg // Push the success message into the channel
 }
