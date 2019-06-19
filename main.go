@@ -24,7 +24,10 @@ func main() {
 	}
 
 	// Print any messages that are pushed by child routines, into the channels 
-	fmt.Println(<- c)
+	for i:= 0; i < len(links); i++ {
+		// Pop message from the channel and then print it
+		fmt.Println(<-c)
+	}
 }
 
 func checkLink(link string, c chan string) {
